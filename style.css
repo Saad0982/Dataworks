@@ -1604,7 +1604,8 @@ a.info-item { color: inherit; text-decoration: none; }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
-	.hero-inner { grid-template-columns: 1fr; text-align: center; }
+	.hero { min-height: auto; padding: 100px 20px 60px; }
+	.hero-inner { grid-template-columns: 1fr; text-align: center; gap: 0; }
 	.hero-buttons { justify-content: center; }
 	.hero-tags { justify-content: center; }
 	.hero-visual { display: none; }
@@ -1616,6 +1617,7 @@ a.info-item { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 768px) {
+	.hero { min-height: auto; padding: 90px 20px 50px; }
 	.menu-toggle { display: flex; }
 
 	.nav-menu {
