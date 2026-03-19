@@ -10,6 +10,7 @@ const portfolioData = [
         tech: ['.NET', 'SQL Server', 'Real-Time Dashboard'],
         result: '✅ Real-time order tracking & worker assignment. Full CRUD operations with admin panel.',
         problem: 'Manual order assignment slowed down operations and lacked real-time coordination.'
+        link: 'https://www.upwork.com/freelancers/~01ab3fb2c8327723cc?p=2017373087932309504'
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ const portfolioData = [
         tech: ['Angular', 'Node.js', 'MySQL'],
         result: '✅ Simplified session management. Better user engagement. Full admin control.',
         problem: 'Managing online fitness sessions and users manually was time-consuming and unorganized.'
+        link: 'http://thefither.com/'
     },
     {
         id: 3,
@@ -28,6 +30,7 @@ const portfolioData = [
         tech: ['React', 'Node.js', 'MySQL', 'Tailwind CSS'],
         result: '✅ Eliminated pricing errors. Sped up client inquiries with automated quotation system.',
         problem: 'Client needed professional web presence and a faster way to generate accurate quotations without manual calculations.'
+        link: 'Artlinkprinters.com'
     },
     {
         id: 4,
@@ -51,12 +54,12 @@ const skillsData = [
     { name: 'MySQL', icon: '🐬', level: 90, category: 'backend' },
     { name: 'SQL Server', icon: '🗄️', level: 85, category: 'backend' },
     { name: 'Power BI', icon: '📊', level: 90, category: 'data' },
-    { name: 'Python', icon: '🐍', level: 78, category: 'data' },
+    { name: 'Python', icon: '🐍', level: 90, category: 'data' },
     { name: 'Tableau', icon: '📈', level: 75, category: 'data' },
     { name: 'Excel (Adv)', icon: '📋', level: 92, category: 'data' },
     { name: 'Salesforce', icon: '☁️', level: 78, category: 'cms' },
     { name: 'SEO', icon: '🔍', level: 82, category: 'cms' },
-    { name: 'AI / LLM', icon: '🤖', level: 80, category: 'frontend' }
+    { name: 'AI / LLM', icon: '🤖', level: 70, category: 'frontend' }
 ];
 
 // ===== CAROUSEL =====
@@ -84,7 +87,13 @@ function createCarouselItem(data, index) {
         </div>
     `;
 
-    item.addEventListener('click', () => goToSlide(index));
+    item.addEventListener('click', () => {
+    if (data.link) {
+        window.open(data.link, '_blank');
+    } else {
+        goToSlide(index);
+    }
+});
     return item;
 }
 
