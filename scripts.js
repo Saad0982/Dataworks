@@ -9,7 +9,7 @@ const portfolioData = [
         description: 'Role-based cafe management system allowing admins to assign orders and workers to update order status in real time. Eliminated manual coordination bottlenecks.',
         tech: ['.NET', 'SQL Server', 'Real-Time Dashboard'],
         result: '✅ Real-time order tracking & worker assignment. Full CRUD operations with admin panel.',
-        problem: 'Manual order assignment slowed down operations and lacked real-time coordination.'
+        problem: 'Manual order assignment slowed down operations and lacked real-time coordination.',
         link: 'https://www.upwork.com/freelancers/~01ab3fb2c8327723cc?p=2017373087932309504'
     },
     {
@@ -19,8 +19,8 @@ const portfolioData = [
         description: 'Women-focused fitness platform with built-in online session scheduling, Google Meet integration, and a centralized admin panel for managing users and recurring sessions.',
         tech: ['Angular', 'Node.js', 'MySQL'],
         result: '✅ Simplified session management. Better user engagement. Full admin control.',
-        problem: 'Managing online fitness sessions and users manually was time-consuming and unorganized.'
-        link: 'http://thefither.com/'
+        problem: 'Managing online fitness sessions and users manually was time-consuming and unorganized.',
+        link: 'http://thefither.com/'  
     },
     {
         id: 3,
@@ -29,8 +29,8 @@ const portfolioData = [
         description: 'Business-focused web application for a printing company that showcases services, highlights portfolio work, and automatically generates quotations using updated service rates.',
         tech: ['React', 'Node.js', 'MySQL', 'Tailwind CSS'],
         result: '✅ Eliminated pricing errors. Sped up client inquiries with automated quotation system.',
-        problem: 'Client needed professional web presence and a faster way to generate accurate quotations without manual calculations.'
-        link: 'Artlinkprinters.com'
+        problem: 'Client needed professional web presence and a faster way to generate accurate quotations without manual calculations.',
+        link: 'https://www.artlinkprinters.com' 
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const portfolioData = [
         description: 'High-traffic event management system built for 150,000+ users with real-time stall management, booking systems, and live coordination tools.',
         tech: ['Full-Stack', 'Real-Time', 'MySQL', 'Node.js'],
         result: '✅ Handled 150K+ users. Real-time stall management for large-scale events.',
-        problem: 'Large-scale event coordination required a robust platform capable of handling massive concurrent traffic.'
+        problem: 'Large-scale event coordination required a robust platform capable of handling massive concurrent traffic.',
     }
 ];
 
@@ -54,12 +54,12 @@ const skillsData = [
     { name: 'MySQL', icon: '🐬', level: 90, category: 'backend' },
     { name: 'SQL Server', icon: '🗄️', level: 85, category: 'backend' },
     { name: 'Power BI', icon: '📊', level: 90, category: 'data' },
-    { name: 'Python', icon: '🐍', level: 90, category: 'data' },
+    { name: 'Python', icon: '🐍', level: 78, category: 'data' },
     { name: 'Tableau', icon: '📈', level: 75, category: 'data' },
     { name: 'Excel (Adv)', icon: '📋', level: 92, category: 'data' },
     { name: 'Salesforce', icon: '☁️', level: 78, category: 'cms' },
     { name: 'SEO', icon: '🔍', level: 82, category: 'cms' },
-    { name: 'AI / LLM', icon: '🤖', level: 70, category: 'frontend' }
+    { name: 'AI / LLM', icon: '🤖', level: 80, category: 'frontend' }
 ];
 
 // ===== CAROUSEL =====
@@ -76,6 +76,10 @@ function createCarouselItem(data, index) {
         `<span class="tech-badge">${tech}</span>`
     ).join('');
 
+    const linkBtn = data.link
+        ? `<a href="${data.link}" target="_blank" class="card-cta" onclick="event.stopPropagation()">View Project →</a>`
+        : '';
+
     item.innerHTML = `
         <div class="card">
             <div class="card-number">0${data.id}</div>
@@ -84,16 +88,12 @@ function createCarouselItem(data, index) {
             <p class="card-description">${data.description}</p>
             <div class="card-tech">${techBadges}</div>
             <div class="card-result">${data.result}</div>
+            ${linkBtn}
         </div>
     `;
 
-    item.addEventListener('click', () => {
-    if (data.link) {
-        window.open(data.link, '_blank');
-    } else {
-        goToSlide(index);
-    }
-});
+    // Clicking the card (not the button) just brings it to center
+    item.addEventListener('click', () => goToSlide(index));
     return item;
 }
 
@@ -377,12 +377,22 @@ contactForm.addEventListener('submit', e => {
     }, 3000);
 });
 
-// ===== LOADING SCREEN =====
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-    }, 1200);
-});
+// ===== LOADING SCREEN (fixed) =====
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) loader.classList.add('hidden');
+}
+
+// Hard timeout — hides loader after 1.5s no matter what
+setTimeout(hideLoader, 1500);
+
+// Also try to hide as soon as possible
+if (document.readyState === 'complete') {
+    hideLoader();
+} else {
+    window.addEventListener('load', hideLoader);
+    document.addEventListener('DOMContentLoaded', () => setTimeout(hideLoader, 800));
+}
 
 // ===== INIT =====
 initCarousel();
