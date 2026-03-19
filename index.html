@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Works – Software & App Development Agency</title>
     <meta name="description" content="Data Works – A dedicated team of developers delivering custom software development, mobile & web app development, WordPress, and Business Intelligence solutions. $20/hr.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Non-blocking fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"></noscript>
+    <!-- Loader kill: hides after 1.5s MAX, never gets stuck -->
+    <script>
+        var _loaderTimer = setTimeout(function() {
+            var l = document.getElementById('loader');
+            if (l) { l.style.display = 'none'; }
+        }, 1500);
+        document.addEventListener('DOMContentLoaded', function() {
+            clearTimeout(_loaderTimer);
+            var l = document.getElementById('loader');
+            if (l) { l.style.display = 'none'; }
+        });
+    </script>
 </head>
 <body>
 
@@ -199,14 +214,14 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-icon">🌐</div>
-                <div class="stat-number" data-target="10+">0</div>
+                <div class="stat-number" data-target="150">0</div>
                 <div class="stat-label">Projects Delivered</div>
                 <p class="stat-description">Custom software and app development projects successfully delivered across web, mobile, websites, and automation — on time, every time.</p>
             </div>
 
             <div class="stat-card">
                 <div class="stat-icon">👥</div>
-                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-number" data-target="50">0</div>
                 <div class="stat-label">Thousand+ Concurrent Users</div>
                 <p class="stat-description">Our team has built and scaled platforms handling 5,000+ simultaneous users, including the KSLM large-scale event management system.</p>
             </div>
@@ -285,11 +300,11 @@
             <div class="contact-info">
                 <div class="contact-info-title">Initialize Connection</div>
 
-                <a href="/cdn-cgi/l/email-protection#90e3f1f1f4f1fcf9a5a0a0a0a5d0f7fdf1f9fcbef3fffd" class="info-item">
+                <a href="/cdn-cgi/l/email-protection#a6d5c7c7c2c7cacf9396969693e6c1cbc7cfca88c5c9cb" class="info-item">
                     <div class="info-icon">📧</div>
                     <div class="info-text">
                         <h4>Email</h4>
-                        <p><span class="__cf_email__" data-cfemail="abd8cacacfcac7c29e9b9b9b9eebccc6cac2c785c8c4c6">[email&#160;protected]</span></p>
+                        <p><span class="__cf_email__" data-cfemail="88fbe9e9ece9e4e1bdb8b8b8bdc8efe5e9e1e4a6ebe7e5">[email&#160;protected]</span></p>
                     </div>
                 </a>
 
@@ -329,12 +344,12 @@
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Saad" autocomplete="name" required>
+                    <input type="text" id="name" name="name" placeholder="Saad" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="john@company.com" autocomplete="email" required>
+                    <input type="email" id="email" name="email" placeholder="john@company.com" required>
                 </div>
 
                 <div class="form-group">
@@ -421,4 +436,4 @@
         <div class="footer-bottom">
             <div class="copyright">© 2026 Data Works. All rights reserved.</div>
             <div class="footer-credits">
-                Built with <span style="color: var(--accent-cyan);">precision</span> · Template by <span style="color: var(--accent-cyan);">Saad</span>
+                Built with <span style="color: var(--accent-cyan);">precision</span> · Template by <a href="https://temp
