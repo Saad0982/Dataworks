@@ -1,5 +1,7 @@
 // Data Works - Portfolio Scripts
 
+document.addEventListener('DOMContentLoaded', function() {
+
 // ===== PROJECT DATA =====
 const portfolioData = [
     {
@@ -372,3 +374,5 @@ contactForm.addEventListener('submit', e => {
 initCarousel();
 initSkillsGrid();
 initParticles();
+
+}); // end DOMContentLoaded
