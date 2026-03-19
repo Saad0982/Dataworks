@@ -23,7 +23,28 @@
 	--text-secondary: #b0b0b0;
 	--text-dim: #808080;
 }
+.card-cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    border: none;
+    border-radius: 25px;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 168, 255, 0.3);
+}
 
+.card-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 168, 255, 0.5);
+}
 html {
 	scroll-behavior: smooth;
 }
