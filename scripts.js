@@ -11,7 +11,8 @@ const portfolioData = [
         description: 'Role-based cafe management system allowing admins to assign orders and workers to update order status in real time. Eliminated manual coordination bottlenecks.',
         tech: ['.NET', 'SQL Server', 'Real-Time Dashboard'],
         result: '✅ Real-time order tracking & worker assignment. Full CRUD operations with admin panel.',
-        problem: 'Manual order assignment slowed down operations and lacked real-time coordination.'
+        problem: 'Manual order assignment slowed down operations and lacked real-time coordination.',
+        link: 'https://www.upwork.com/freelancers/~01ab3fb2c8327723cc?p=2017373087932309504'
     },
     {
         id: 2,
@@ -20,7 +21,8 @@ const portfolioData = [
         description: 'Women-focused fitness platform with built-in online session scheduling, Google Meet integration, and a centralized admin panel for managing users and recurring sessions.',
         tech: ['Angular', 'Node.js', 'MySQL'],
         result: '✅ Simplified session management. Better user engagement. Full admin control.',
-        problem: 'Managing online fitness sessions and users manually was time-consuming and unorganized.'
+        problem: 'Managing online fitness sessions and users manually was time-consuming and unorganized.',
+        link: 'http://thefither.com/'
     },
     {
         id: 3,
@@ -29,7 +31,8 @@ const portfolioData = [
         description: 'Business-focused web application for a printing company that showcases services, highlights portfolio work, and automatically generates quotations using updated service rates.',
         tech: ['React', 'Node.js', 'MySQL', 'Tailwind CSS'],
         result: '✅ Eliminated pricing errors. Sped up client inquiries with automated quotation system.',
-        problem: 'Client needed professional web presence and a faster way to generate accurate quotations without manual calculations.'
+        problem: 'Client needed professional web presence and a faster way to generate accurate quotations without manual calculations.',
+        link: 'https://www.artlinkprinters.com/'
     },
     {
         id: 4,
@@ -38,7 +41,8 @@ const portfolioData = [
         description: 'High-traffic event management system built for 150,000+ users with real-time stall management, booking systems, and live coordination tools.',
         tech: ['Full-Stack', 'Real-Time', 'MySQL', 'Node.js'],
         result: '✅ Handled 150K+ users. Real-time stall management for large-scale events.',
-        problem: 'Large-scale event coordination required a robust platform capable of handling massive concurrent traffic.'
+        problem: 'Large-scale event coordination required a robust platform capable of handling massive concurrent traffic.',
+        link: ''
     }
 ];
 
