@@ -533,6 +533,8 @@ body::after {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-top: 25px;
+	padding-right: 25px;
 }
 
 .hero-card {
@@ -621,36 +623,42 @@ body::after {
 .hero-card-stat-value.blue { color: var(--accent-cyan); }
 
 .hero-floating-badge {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 90px;
-    height: 90px;
-    background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
-    animation: float 3s ease-in-out infinite;
-    z-index: 10;
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	width: 85px;
+	height: 85px;
+	background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+	animation: float 3s ease-in-out infinite;
+	z-index: 10;
+}
+
+@keyframes float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
 }
 
 .hero-floating-badge .badge-num {
-    font-size: 18px;
-    font-weight: 900;
-    line-height: 1.2;
-    color: #fff;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 1.2;
+	color: #fff;
 }
 
 .hero-floating-badge .badge-text {
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-    opacity: 0.9;
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	opacity: 0.9;
 }
+
 /* ========== ABOUT SECTION ========== */
 .about-section {
 	padding: 120px 30px;
