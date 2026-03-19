@@ -79,6 +79,10 @@ function createCarouselItem(data, index) {
         `<span class="tech-badge">${tech}</span>`
     ).join('');
 
+    const linkBtn = data.link
+        ? `<a href="${data.link}" target="_blank" class="card-cta" onclick="event.stopPropagation()">View Project →</a>`
+        : '';
+
     item.innerHTML = `
         <div class="card">
             <div class="card-number">0${data.id}</div>
@@ -87,6 +91,7 @@ function createCarouselItem(data, index) {
             <p class="card-description">${data.description}</p>
             <div class="card-tech">${techBadges}</div>
             <div class="card-result">${data.result}</div>
+            ${linkBtn}
         </div>
     `;
 
